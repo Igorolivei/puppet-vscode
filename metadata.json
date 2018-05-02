@@ -1,0 +1,56 @@
+{
+  "name": "igorolivei-vscode",
+  "version": "0.1.0",
+  "author": "igorolivei",
+  "summary": "Puppet module to install VS Code",
+  "license": "Apache-2.0",
+  "source": "https://github.com/igorolivei/puppet-vscode",
+  "project_page": "https://github.com/igorolivei/puppet-vscode",
+  "issues_url": "https://github.com/igorolivei/puppet-vscode/issues",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "8", "9"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "17.10"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 6.0.0"
+    }
+  ],
+  "dependencies": [
+    {
+      "name":"maestrodev/wget"
+    },
+    {
+      "name":"puppetlabs/apt"
+    },
+    {
+      "name":"puppetlabs/stdlib"
+    }
+  ],
+  "pdk-version": "1.2.1",
+  "template-url": "https://github.com/puppetlabs/pdk-module-template",
+  "template-ref": "heads/master-0-g00b18a7"
+}

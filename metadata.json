@@ -41,13 +41,16 @@
   ],
   "dependencies": [
     {
-      "name":"maestrodev/wget"
+      "name":"maestrodev/wget",
+      "version_requirement": "1.7.3"
     },
     {
-      "name":"puppetlabs/apt"
+      "name":"puppetlabs/apt",
+      "version_requirement": "4.5.1"
     },
     {
-      "name":"puppetlabs/stdlib"
+      "name":"puppetlabs/stdlib",
+      "version_requirement": "4.25.1"
     }
   ],
   "pdk-version": "1.2.1",

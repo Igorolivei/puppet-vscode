@@ -1,3 +1,4 @@
+# Internal class to install VS Code
 class vscode::install {
 
   case $facts['os']['family'] {
@@ -26,7 +27,7 @@ class vscode::install {
       }
 
       exec { 'gpg --dearmor /tmp/microsoft.asc':
-        path => ['/usr/bin', '/usr/sbin',],
+        path    => ['/usr/bin', '/usr/sbin',],
         creates => '/tmp/microsoft.asc.gpg',
         require => [
           Wget::Fetch['Download Microsoft VS Code gpg key'],
@@ -35,7 +36,7 @@ class vscode::install {
 
       file { '/etc/apt/trusted.gpg.d/microsoft.gpg':
         ensure  => present,
-        source  => "file:///tmp/microsoft.asc.gpg",
+        source  => 'file:///tmp/microsoft.asc.gpg',
         require => [
           Exec['gpg --dearmor /tmp/microsoft.asc'],
         ]

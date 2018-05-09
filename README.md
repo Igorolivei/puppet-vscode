@@ -1,4 +1,4 @@
-![License](https://img.shields.io/badge/license-Apache%202-blue.svg)
+![License](https://img.shields.io/badge/license-Apache%202-blue.svg) ![Version](https://img.shields.io/puppetforge/v/igorolivei/vscode.svg) ![Downloads](https://img.shields.io/puppetforge/dt/igorolivei/vscode.svg)
 # VSCode
 
 #### Table of contents
@@ -32,10 +32,18 @@ Tested only in X86_64 arch.
 
 ## Installation
 
-Via git
+### Via git
 
-    # cd /etc/puppetlabs/code/environment/production/modules
-    # git clone https://github.com/igorolivei/puppet-vscode.git vscode
+    cd /etc/puppetlabs/code/environment/production/modules
+    git clone https://github.com/igorolivei/puppet-vscode.git vscode
+
+### Via puppet
+
+    puppet module install igorolivei/vscode
+
+### Via puppetfile
+
+    mod 'igorolivei-vscode', '0.2.0'
 
 ## Usage
 
@@ -68,6 +76,7 @@ This module was developed using
     - box: centos/7
     - box: debian/stretch64
     - box: debian/jessie64
+    - box: mwrock/Windows2016
 
 ### Author/Contributors
 

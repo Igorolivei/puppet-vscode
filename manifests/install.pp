@@ -1,4 +1,3 @@
-# Internal class to install VS Code
 class vscode::install {
 
   case $facts['os']['family'] {
@@ -15,7 +14,7 @@ class vscode::install {
       package { 'code':
         ensure  => installed,
         require => [
-        Yumrepo['vscode.repo'],
+          Yumrepo['vscode.repo'],
         ],
       }
     }
@@ -57,6 +56,20 @@ class vscode::install {
         require => [
           Apt::Source['vscode'],
         ],
+      }
+    }
+
+    'Windows': {
+      file { 'C:/tmp/VSCode.exe':
+        ensure => file,
+        source => 'https://az764295.vo.msecnd.net/stable/7c7da59c2333a1306c41e6e7b68d7f0caa7b3d45/VSCodeSetup-ia32-1.23.0.exe',
+      }
+
+      package { 'code':
+        ensure          => installed,
+        source          => 'C:/tmp/VSCode.exe',
+        install_options => ['/verysilent', { '/log' => 'C:\\VSCode-install.log', }],
+        require         => File['C:/tmp/VSCode.exe'],
       }
     }
 

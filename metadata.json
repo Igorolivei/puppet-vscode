@@ -1,6 +1,6 @@
 {
   "name": "igorolivei-vscode",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "igorolivei",
   "summary": "Puppet module to install VS Code",
   "license": "Apache-2.0",
@@ -30,6 +30,14 @@
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
         "7"
+      ]
+    },
+    {
+      "operatingsystem": "Windows",
+      "operatingsystemrelease": [
+        "Server 2016",
+        "7",
+        "8"
       ]
     }
   ],

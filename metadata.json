@@ -1,6 +1,6 @@
 {
   "name": "igorolivei-vscode",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "igorolivei",
   "summary": "Puppet module to install VS Code",
   "license": "Apache-2.0",
